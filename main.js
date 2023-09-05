@@ -1,24 +1,29 @@
-let count = 0; 
-const countDisplay = document.getElementById('counter'); 
-const incrementButton = document.getElementById('increment');
-const decrementButton = document.getElementById('decrement');
-const resetButton = document.getElementById('reset');
+let count = 0;
+let maxCount = 20;
+const countDisplay = document.querySelector('.counter');
+const incrementButton = document.querySelector('.increase-button');
+const decrementButton = document.querySelector('.decrease-buttom');
+const resetButton = document.querySelector('.restart-butom');
 
 
-const updateDisplay = () => {   
+const updateDisplay = () => {
     countDisplay.textContent = count;
 }
 
 
 const getIncrement = () => {
-    count++;
-    updateDisplay();
-}
+    if (count < maxCount) {
+        count++;
+        updateDisplay();
+    };
+};
 
 
 const getDecrement = () => {
-    count--;
-    updateDisplay();
+    if (count > 0) {
+        count--;
+        updateDisplay();
+    };
 }
 
 
