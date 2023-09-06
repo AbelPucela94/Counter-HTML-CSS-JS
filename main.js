@@ -15,6 +15,8 @@ const getIncrement = () => {
     if (count < maxCount) {
         count++;
         updateDisplay();
+    } else {
+        countDisplay.textContent = 'Limite';
     };
 };
 
@@ -23,8 +25,10 @@ const getDecrement = () => {
     if (count > 0) {
         count--;
         updateDisplay();
+    } else {
+        countDisplay.textContent = 'Limite';
     };
-}
+};
 
 
 const getReset = () => {
